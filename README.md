@@ -13,7 +13,7 @@
 
 ## ❖・Introduction・❖
 
-Create a database of passwords associated with web sites. Your database should consist of the following information:
+Create a database of passwords associated with web sites/apps. Your database should consist of the following information:
 
 * Website name and URL
 * User’s first name, last name, username, and email address

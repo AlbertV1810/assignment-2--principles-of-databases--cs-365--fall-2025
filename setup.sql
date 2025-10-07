@@ -21,7 +21,7 @@ CREATE TABLE passwords (
 );
 
 INSERT INTO passwords (user_id, website_name, url, password, comment) VALUES
-(1, 'MY SQL', 'https://mysql.com', AES_ENCRYPT('stingPass1', 'secretKey')'Main DB account'),
+(1, 'MY SQL', 'https://mysql.com', AES_ENCRYPT('stingPass1', 'secretKey'), 'Main DB account'),
 (2, 'Hartford Portal', 'http://hartford.edu', AES_ENCRYPT('kimPass2', 'secretKey'), 'School login'),
 (3, 'GitHub', 'https://github.com', AES_ENCRYPT('gitSecure3', 'secretKey'), 'Code repo login'),
 (4, 'Netflix', 'http://netflix.com', AES_ENCRYPT('streamPass4', 'secretKey'), 'Streaming account'),
@@ -31,3 +31,15 @@ INSERT INTO passwords (user_id, website_name, url, password, comment) VALUES
 (8, 'Twitter', 'http://twitter.com', AES_ENCRYPT('tweetSafe8', 'secretKey'), 'Social media'),
 (9, 'Stack Overflow', 'http://stackoverflow.com', AES_ENCRYPT('codeHelp9', 'secretKey'), 'Programming Q&A site'),
 (10, 'LinkedIn', 'https://linkedin.com', AES_ENCRYPT('careerTrack10', 'secretKey'), 'Professional profile');
+
+INSERT INTO users (first_name, last_name, username, email) VALUES
+('Gordon', 'Sumner', 'sting123', 'sting@thepolice.com'),
+('Kim', 'Thayil', 'kimrock', 'kim@soundgarden.com'),
+('Saul', 'Hudson', 'slashman', 'slash@gnr.com'),
+('Emily', 'Kokal', 'emkokal', 'emily@warpaint.com'),
+('Mike', 'Inez', 'inezbass', 'mike@aic.com'),
+('Chris', 'Cornell', 'chrisc', 'chris@soundgarden.com'),
+('Jenny', 'Lindberg', 'jennyl', 'jenny@warpaint.com'),
+('Jerry', 'Cantrell', 'jerryc', 'jerry@aic.com'),
+('Axl', 'Rose', 'axlrose', 'axl@gnr.com'),
+('Andy', 'Summers', 'andys', 'andy@thepolice.com');

@@ -17,7 +17,7 @@ WHERE url = 'https://mysql.com';
 SELECT
   p.website_name,
   p.url,
-  AES_DECRYPT(p.password, 'secretKey') AS decrypted_password,
+  CAST(AES_DECRYPT(p.password, 'secretKey') AS CHAR) AS decrypted_password,
   p.comment,
   p.created_at,
   u.first_name,

@@ -8,8 +8,8 @@ VALUES (
   'Video conferencing account'
 );
 
--- 2. Retrieve encrypted password for a specific URL
-SELECT password
+-- 2. Retrieve decrypted password for a specific URL
+SELECT CAST(AES_DECRYPT(password, 'secretKey') AS CHAR) AS decrypted_password
 FROM passwords
 WHERE url = 'https://mysql.com';
 

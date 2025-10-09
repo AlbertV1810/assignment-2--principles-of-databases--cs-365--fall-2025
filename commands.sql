@@ -1,7 +1,6 @@
 -- 1. Create a new password entry for a new site
-INSERT INTO passwords (user_id, website_name, url, password, comment)
+INSERT INTO passwords (website_name, url, password, comment)
 VALUES (
-  1,
   '[WEBSITE_NAME]',
   '[URL]',
   AES_ENCRYPT('[PLAINTEXT_PASSWORD]', 'secret_key'),

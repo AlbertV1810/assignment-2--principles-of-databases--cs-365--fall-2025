@@ -27,9 +27,9 @@ FROM passwords p
 JOIN users u ON p.user_id = u.user_id
 WHERE p.url LIKE 'https%';
 
--- 4. Update a URL from http to https
+-- 4. Change a URL associated with one of the passwords
 UPDATE passwords
-SET url = '[NEW_URL]'
+SET url = CONCAT('https', SUBSTRING(url, 5))
 WHERE website_name = '[TARGET_SITE]';
 
 -- 5. Update password for a specific site
@@ -41,6 +41,6 @@ WHERE website_name = '[TARGET_SITE]';
 DELETE FROM passwords
 WHERE url = '[TARGET_URL]';
 
--- 7. Delete password entry by password value
+-- 7. Delete password entry by password
 DELETE FROM passwords
 WHERE password = AES_ENCRYPT('PLAINTEXT_PASSWORD', 'secret_key');
